@@ -16,7 +16,7 @@ IO.foreach(input_file).with_index do |line, line_number|
   current_position += 3
 
   # Wrap around the map if needed
-  current_position -= border if current_position >= border
+  current_position %= border
 end
 
 puts "Solution: #{trees_found}"

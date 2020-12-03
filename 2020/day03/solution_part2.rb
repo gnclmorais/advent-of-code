@@ -30,7 +30,7 @@ all_trees_found = variants.reduce(1) do |acc, (right, down)|
     current_position += right
 
     # Wrap around the map if needed
-    current_position -= border if current_position >= border
+    current_position %= border
   end
 
   acc * trees_found
